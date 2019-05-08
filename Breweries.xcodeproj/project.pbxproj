@@ -12,6 +12,12 @@
 		068C88B9224069800078BCA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 068C88B7224069800078BCA2 /* Main.storyboard */; };
 		068C88BB224069810078BCA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 068C88BA224069810078BCA2 /* Assets.xcassets */; };
 		068C88BE224069810078BCA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 068C88BC224069810078BCA2 /* LaunchScreen.storyboard */; };
+		068C88C6224069A30078BCA2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C88C5224069A30078BCA2 /* Constants.swift */; };
+		068C88C82242F1AA0078BCA2 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C88C72242F1AA0078BCA2 /* Networking.swift */; };
+		068C88CA2246EACF0078BCA2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C88C92246EACF0078BCA2 /* Location.swift */; };
+		068C88CC2246EFED0078BCA2 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C88CB2246EFED0078BCA2 /* LocationCell.swift */; };
+		068C88D02249B3060078BCA2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C88CF2249B3060078BCA2 /* Extensions.swift */; };
+		940889087C6E6509ACD3D559 /* Pods_Breweries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E305DB09A1F3F8118E4773 /* Pods_Breweries.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,14 @@
 		068C88BA224069810078BCA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		068C88BD224069810078BCA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		068C88BF224069810078BCA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		068C88C5224069A30078BCA2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		068C88C72242F1AA0078BCA2 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		068C88C92246EACF0078BCA2 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		068C88CB2246EFED0078BCA2 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		068C88CF2249B3060078BCA2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2DDCA5AB2A3806FA9BAF21D4 /* Pods-Breweries.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breweries.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breweries/Pods-Breweries.release.xcconfig"; sourceTree = "<group>"; };
+		7F2EDC212E678BD96CEB3F7F /* Pods-Breweries.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breweries.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Breweries/Pods-Breweries.debug.xcconfig"; sourceTree = "<group>"; };
+		B4E305DB09A1F3F8118E4773 /* Pods_Breweries.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breweries.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				940889087C6E6509ACD3D559 /* Pods_Breweries.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +55,8 @@
 			children = (
 				068C88B2224069800078BCA2 /* Breweries */,
 				068C88B1224069800078BCA2 /* Products */,
+				262C57C25A0A4EC4471464B7 /* Pods */,
+				E4A9C09B9219E72E22E9D0FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +72,59 @@
 			isa = PBXGroup;
 			children = (
 				068C88B3224069800078BCA2 /* AppDelegate.swift */,
-				068C88B5224069800078BCA2 /* ViewController.swift */,
+				068C88D12252E52B0078BCA2 /* Controllers */,
+				068C88D22252E53D0078BCA2 /* Model */,
+				068C88D32252E54D0078BCA2 /* View */,
 				068C88B7224069800078BCA2 /* Main.storyboard */,
 				068C88BA224069810078BCA2 /* Assets.xcassets */,
 				068C88BC224069810078BCA2 /* LaunchScreen.storyboard */,
 				068C88BF224069810078BCA2 /* Info.plist */,
 			);
 			path = Breweries;
+			sourceTree = "<group>";
+		};
+		068C88D12252E52B0078BCA2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				068C88B5224069800078BCA2 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		068C88D22252E53D0078BCA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				068C88C92246EACF0078BCA2 /* Location.swift */,
+				068C88CF2249B3060078BCA2 /* Extensions.swift */,
+				068C88C5224069A30078BCA2 /* Constants.swift */,
+				068C88C72242F1AA0078BCA2 /* Networking.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		068C88D32252E54D0078BCA2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				068C88CB2246EFED0078BCA2 /* LocationCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		262C57C25A0A4EC4471464B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F2EDC212E678BD96CEB3F7F /* Pods-Breweries.debug.xcconfig */,
+				2DDCA5AB2A3806FA9BAF21D4 /* Pods-Breweries.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E4A9C09B9219E72E22E9D0FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4E305DB09A1F3F8118E4773 /* Pods_Breweries.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 068C88C2224069810078BCA2 /* Build configuration list for PBXNativeTarget "Breweries" */;
 			buildPhases = (
+				C2697D9386F913DA0AA52C3B /* [CP] Check Pods Manifest.lock */,
 				068C88AC224069800078BCA2 /* Sources */,
 				068C88AD224069800078BCA2 /* Frameworks */,
 				068C88AE224069800078BCA2 /* Resources */,
+				C56CBE01AAD2861FC5BB2CA8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +195,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C2697D9386F913DA0AA52C3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Breweries-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C56CBE01AAD2861FC5BB2CA8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Breweries/Pods-Breweries-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Breweries/Pods-Breweries-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		068C88AC224069800078BCA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +251,11 @@
 			files = (
 				068C88B6224069800078BCA2 /* ViewController.swift in Sources */,
 				068C88B4224069800078BCA2 /* AppDelegate.swift in Sources */,
+				068C88CA2246EACF0078BCA2 /* Location.swift in Sources */,
+				068C88D02249B3060078BCA2 /* Extensions.swift in Sources */,
+				068C88C6224069A30078BCA2 /* Constants.swift in Sources */,
+				068C88C82242F1AA0078BCA2 /* Networking.swift in Sources */,
+				068C88CC2246EFED0078BCA2 /* LocationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +399,13 @@
 		};
 		068C88C3224069810078BCA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F2EDC212E678BD96CEB3F7F /* Pods-Breweries.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z928ALPHEA;
 				INFOPLIST_FILE = Breweries/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +419,13 @@
 		};
 		068C88C4224069810078BCA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DDCA5AB2A3806FA9BAF21D4 /* Pods-Breweries.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z928ALPHEA;
 				INFOPLIST_FILE = Breweries/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
